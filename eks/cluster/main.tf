@@ -42,7 +42,7 @@ module "eks" {
   vpc_id = var.vpc_id
   cluster_name = var.eks_cluster_name
   subnet_ids = var.private_subnet_ids
-  cluster_enabled_log_types       = ["api", "audit", "authenticator", "controllerManager", "scheduler"]
+  create_cloudwatch_log_group = false
   cluster_endpoint_private_access = true
   cluster_endpoint_public_access  = false
   cluster_version                 = var.eks_cluster_version

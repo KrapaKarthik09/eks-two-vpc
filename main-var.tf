@@ -47,3 +47,7 @@ variable "node_host_key_name" {
   default = "businessnext-key"
   type        = string
 }
+
+variable "public_subnets" {
+  type        = string
+}

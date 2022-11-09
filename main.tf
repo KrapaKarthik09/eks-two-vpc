@@ -35,9 +35,9 @@ module "cluster" {
     region = var.region
     eks_cluster_name = var.eks_cluster_name
     eks_cluster_version = var.eks_cluster_version 
-    private_subnet_ids = ["subnet-0f38496754cec5b1e","subnet-0259799ba3e3adf3a", "subnet-0a6bb3e5deff2db86"]
-    vpc_id = "vpc-0f2c49da65067dc84"
-    bastion_host_SG_id = "sg-0229f8202d438140e"
+    private_subnet_ids = var.public_subnets
+    vpc_id = ""
+    bastion_host_SG_id = ""
     lin_desired_size = var.lin_desired_size
     lin_max_size = var.lin_max_size
     lin_min_size = var.lin_min_size
